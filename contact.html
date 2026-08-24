@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact â€” Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+<!-- SVG ICON SPRITE -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="4,13 10,19 20,6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><circle cx="17" cy="10" r="2.6"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><path d="M15.5 14.2c2.5.3 4.5 2.3 4.5 5.8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><line x1="5" y1="21" x2="19" y2="21"/><rect x="6" y="12" width="3.2" height="8"/><rect x="10.4" y="7" width="3.2" height="13"/><rect x="14.8" y="3" width="3.2" height="17"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,9 13,9"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,6 12,13 21,6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,2.5 15,9.5 22,10.3 16.8,15 18.3,21.5 12,18 5.7,21.5 7.2,15 2,10.3 9,9.5"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
+  <symbol id="i-sync" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 6v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3M4 18v-5h5"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-4.6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-8 11-8 11z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5L17 21l-1.5-8.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="21" y1="21" x2="15.3" y2="15.3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><polygon points="3,11 21,3 13,21 11,13"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12,3 21,8 12,13 3,8"/><polyline points="3,14 12,19 21,14"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><line x1="5" y1="3" x2="5" y2="21"/><path d="M5 4h14l-3 4 3 4H5"/></symbol>
+</svg>
+
+<!-- DAY RAIL -->
+<div id="day-rail">
+  <div class="seg" style="--seg-color:var(--home-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--about-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--services-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--blog-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--contact-a)"><div class="fill"></div></div>
+</div>
+<div class="rail-labels">
+  <span data-lbl="home">Dawn Â· Home</span>
+  <span data-lbl="about">Morning Â· About</span>
+  <span data-lbl="services">Midday Â· Services</span>
+  <span data-lbl="blog">Afternoon Â· Blog</span>
+  <span data-lbl="contact">Dusk Â· Contact</span>
+</div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-in">
+    <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+    <div class="scrim" id="scrim"></div>
+    <nav class="primary" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About Us</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="login.html">Log in</a>
+        <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="login.html">Log in</a>
+      <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="page" id="contact" style="--seg-color:var(--contact-a); --seg-color-soft:#6B4E9E26;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">Dusk Â· 17:00 â€” let's talk</span>
+      <h2>We're quick to reply, even in the evening</h2>
+      <p>Sales, support, partnerships or press â€” pick the right door and someone will answer.</p>
+    </div>
+
+    <div class="hero-mosaic" aria-label="Ways to connect with Stackly">
+      <img src="assets/images/contact-conversation.webp" alt="Conversation bubbles around a message card" width="900" height="620" fetchpriority="high">
+      <img src="assets/images/contact-global.webp" alt="Global offices connected by violet arcs" width="900" height="620" loading="lazy">
+      <img src="assets/images/contact-support.webp" alt="A friendly support desk with an envelope and clock" width="900" height="620" loading="lazy">
+      <img class="hero-image-fourth" src="assets/images/contact-trust.webp" alt="A shield protecting a glowing connection" width="900" height="620" loading="lazy">
+    </div>
+
+    <div class="contact-grid">
+      <div class="form-card">
+        <div class="field"><label>Full name</label><input type="text" placeholder="Jordan Lee"></div>
+        <div class="field"><label>Work email</label><input type="email" placeholder="jordan@company.com"></div>
+        <div class="field"><label>What's this about</label><input type="text" placeholder="Team plan pricing"></div>
+        <div class="field"><label>Message</label><textarea rows="4" placeholder="Tell us a bit about your team..."></textarea></div>
+        <button class="btn btn-solid" style="width:100%; justify-content:center; padding:13px;">Send message</button>
+      </div>
+      <div class="map-list">
+        <div class="map-item"><span class="dot"></span><div><h4 style="font-size:0.98rem;">San Francisco (HQ)</h4><p style="font-size:0.88rem; color:var(--ink-soft); margin-top:3px;">548 Market St, remote-friendly office</p></div></div>
+        <div class="map-item"><span class="dot"></span><div><h4 style="font-size:0.98rem;">Lisbon</h4><p style="font-size:0.88rem; color:var(--ink-soft); margin-top:3px;">Engineering hub, EU time zone coverage</p></div></div>
+        <div class="map-item"><span class="dot"></span><div><h4 style="font-size:0.98rem;">Bengaluru</h4><p style="font-size:0.88rem; color:var(--ink-soft); margin-top:3px;">Support & customer success team</p></div></div>
+      </div>
+    </div>
+
+    <div class="subgrid">
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-chat"/></svg></div><h3>Live chat</h3><p>Average first response under three minutes, 8amâ€“8pm on weekdays.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-mail"/></svg></div><h3>Email support</h3><p>support@stackly.app â€” replies within one business day, guaranteed.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-briefcase"/></svg></div><h3>Sales inquiries</h3><p>Talk to us about team, enterprise or education pricing.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-users"/></svg></div><h3>Partnerships</h3><p>Integrations, co-marketing and reseller programs, one inbox.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-search"/></svg></div><h3>Help center & FAQ</h3><p>Searchable answers to the 200 questions we hear most often.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-globe"/></svg></div><h3>Follow along</h3><p>Product notes and planning tips on X, LinkedIn and our RSS feed.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-clock"/></svg></div><h3>Response times</h3><p>Support: same day. Sales: within 24 hours. Press: within 48 hours.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-shield"/></svg></div><h3>Trust & security</h3><p>Report a vulnerability or request our latest security documentation.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-layers"/></svg></div><h3>Community forum</h3><p>Ask fellow Stackly users how they've set up their own workspace.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-pin"/></svg></div><h3>Visit an office</h3><p>Drop by San Francisco, Lisbon or Bengaluru â€” coffee's on us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section soft" aria-labelledby="contact-route-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Choose the right route</span><h2 id="contact-route-title">Get to the right person faster</h2></div><div class="feature-grid"><article class="feature-panel"><h3>Product support</h3><p>Questions about setup, billing, integrations or an existing workspace.</p></article><article class="feature-panel"><h3>Sales & enterprise</h3><p>Pricing, security reviews, procurement and rollout planning.</p></article><article class="feature-panel"><h3>Press & partnerships</h3><p>Media requests, integration partnerships and community programs.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="contact-times-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">What to expect</span><h2 id="contact-times-title">Clear response times, every time</h2></div><div class="metric-grid"><div class="metric-box"><strong>&lt;3m</strong><span>live chat first response</span></div><div class="metric-box"><strong>4h</strong><span>average support reply</span></div><div class="metric-box"><strong>24h</strong><span>sales response target</span></div><div class="metric-box"><strong>98%</strong><span>customer satisfaction</span></div></div></div></section>
+
+<section class="content-section soft" aria-labelledby="contact-offices-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Around the clock</span><h2 id="contact-offices-title">Three hubs, one global team</h2><p>Our teams in San Francisco, Lisbon and Bengaluru hand conversations across time zones so help is never far away.</p></div><ul class="check-list"><li>Americas coverage from San Francisco</li><li>European coverage from Lisbon</li><li>Asia-Pacific coverage from Bengaluru</li></ul></div></section>
+
+<section class="content-section" aria-labelledby="contact-faq-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Before you write</span><h2 id="contact-faq-title">Quick answers</h2></div><div class="faq-list"><article class="faq-item"><h3>Can I try Stackly before buying?</h3><p>Yes. Every workspace starts with a free trial and no credit card is required.</p></article><article class="faq-item"><h3>Do you help with migration?</h3><p>Team plans include guided imports from common task and project tools.</p></article><article class="faq-item"><h3>Is education pricing available?</h3><p>Discounted plans are available for verified schools and universities.</p></article><article class="faq-item"><h3>Where can I report a security issue?</h3><p>Send responsible disclosures directly to security@stackly.app.</p></article></div></div></section>
+
+<section class="content-section soft" aria-labelledby="contact-help-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Help yourself anytime</span><h2 id="contact-help-title">Answers are available around the clock</h2><p>Explore step-by-step guidance while you wait, or solve common questions without opening a ticket.</p></div><div class="feature-grid"><article class="feature-panel"><h3>Getting started guides</h3><p>Set up a workspace, import existing tasks, and plan your first productive week.</p></article><article class="feature-panel"><h3>Video walkthroughs</h3><p>Short demonstrations cover calendars, automation, reporting, and team permissions.</p></article><article class="feature-panel"><h3>Community answers</h3><p>Learn from workflows shared by experienced Stackly users across industries.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="contact-success-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Customer success</span><h2 id="contact-success-title">We stay with you after setup</h2><p>Our success team helps growing organizations turn a successful launch into lasting, healthy habits.</p></div><ul class="check-list"><li>Workspace health and adoption reviews</li><li>Training sessions for new team members</li><li>Workflow recommendations as you grow</li><li>Early access to relevant product updates</li></ul></div></section>
+
+<section class="content-section" aria-labelledby="contact-ready-title"><div class="wrap"><div class="section-cta"><div><h2 id="contact-ready-title">Not sure which door to choose?</h2><p>Send one message and we will route it to the right Stackly specialist.</p></div><a class="btn" href="#contact">Send a message</a></div></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+        <p>Productivity software that turns busy schedules into calm, realistic daily plans.</p>
+<div class="footer-socials" aria-label="Social media">
+          <a href="404.html" aria-label="Stackly on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5V18M6.5 5.5v.1M10.5 18v-5.3c0-2.3 3-3.3 4.5-1.5.4.5.5 1.2.5 2V18M10.5 11v7"/></svg></a>
+          <a href="404.html" aria-label="Stackly on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></a>
+          <a href="404.html" aria-label="Stackly on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.8" r=".7" class="icon-fill"/></svg></a>
+          <a href="404.html" aria-label="Stackly RSS feed"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="17.5" r="1" class="icon-fill"/><path d="M5.5 11.5a7 7 0 0 1 7 7M5.5 6a12.5 12.5 0 0 1 12.5 12.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-column"><h2>Product</h2><a href="services.html">Features</a><a href="services.html#services-flow-title">Workflows</a><a href="services.html#services-integrations-title">Integrations</a><a href="services.html#services-security-title">Security</a></div>
+      <div class="footer-column"><h2>Company</h2><a href="about.html">About us</a><a href="about.html#about-culture-title">Culture</a><a href="about.html#about-join-title">Careers</a><a href="contact.html">Contact</a></div>
+      <div class="footer-column"><h2>Resources</h2><a href="blog.html">Journal</a><a href="blog.html#blog-library-title">Templates</a><a href="contact.html#contact-faq-title">Help & FAQ</a><a href="contact.html#contact-route-title">Support</a></div>
+      <div class="footer-newsletter">
+        <h2>A better Friday email</h2><p>One practical planning idea, plus new templates and product notes.</p>
+        <form class="footer-form"><label class="sr-only" for="footer-email-contact">Email address</label><input id="footer-email-contact" type="email" placeholder="you@company.com" required><button type="submit" class="btn btn-solid">Subscribe</button></form>
+        <span class="footer-note">No spam. Unsubscribe whenever you like.</span>
+      </div>
+    </div>
+    <div class="footer-contact"><span>support@stackly.app</span><span>San Francisco · Lisbon · Bengaluru</span><span>Support: Mon–Fri, 8am–8pm</span></div>
+    <div class="footer-bottom"><span>© 2026 Stackly. Plan the day, not just the list.</span><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Accessibility</a></div></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

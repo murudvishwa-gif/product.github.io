@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog â€” Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="blog">
+<!-- SVG ICON SPRITE -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="4,13 10,19 20,6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><circle cx="17" cy="10" r="2.6"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><path d="M15.5 14.2c2.5.3 4.5 2.3 4.5 5.8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><line x1="5" y1="21" x2="19" y2="21"/><rect x="6" y="12" width="3.2" height="8"/><rect x="10.4" y="7" width="3.2" height="13"/><rect x="14.8" y="3" width="3.2" height="17"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,9 13,9"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,6 12,13 21,6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,2.5 15,9.5 22,10.3 16.8,15 18.3,21.5 12,18 5.7,21.5 7.2,15 2,10.3 9,9.5"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
+  <symbol id="i-sync" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 6v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3M4 18v-5h5"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-4.6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-8 11-8 11z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5L17 21l-1.5-8.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="21" y1="21" x2="15.3" y2="15.3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><polygon points="3,11 21,3 13,21 11,13"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12,3 21,8 12,13 3,8"/><polyline points="3,14 12,19 21,14"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><line x1="5" y1="3" x2="5" y2="21"/><path d="M5 4h14l-3 4 3 4H5"/></symbol>
+</svg>
+
+<!-- DAY RAIL -->
+<div id="day-rail">
+  <div class="seg" style="--seg-color:var(--home-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--about-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--services-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--blog-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--contact-a)"><div class="fill"></div></div>
+</div>
+<div class="rail-labels">
+  <span data-lbl="home">Dawn Â· Home</span>
+  <span data-lbl="about">Morning Â· About</span>
+  <span data-lbl="services">Midday Â· Services</span>
+  <span data-lbl="blog">Afternoon Â· Blog</span>
+  <span data-lbl="contact">Dusk Â· Contact</span>
+</div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-in">
+    <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+    <div class="scrim" id="scrim"></div>
+    <nav class="primary" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About Us</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="login.html">Log in</a>
+        <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="login.html">Log in</a>
+      <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="page" id="blog" style="--seg-color:var(--blog-a); --seg-color-soft:#3B6EA526;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">Afternoon Â· 14:00 â€” from the journal</span>
+      <h2>Notes on working well</h2>
+      <p>Field notes on planning, focus and running a calmer team, published weekly.</p>
+    </div>
+
+    <div class="hero-mosaic" aria-label="Ideas for calmer, more focused work">
+      <img src="assets/images/blog-calendar.webp" alt="A calendar folding into a landscape of focus blocks" width="900" height="620" fetchpriority="high">
+      <img src="assets/images/blog-focus.webp" alt="A focus capsule protected from notifications" width="900" height="620" loading="lazy">
+      <img src="assets/images/blog-remote.webp" alt="Remote desks connected across time zones" width="900" height="620" loading="lazy">
+      <img class="hero-image-fourth" src="assets/images/blog-habits.webp" alt="Task-card stepping stones leading toward a goal" width="900" height="620" loading="lazy">
+    </div>
+
+    <div class="blog-feature">
+      <div class="art"></div>
+      <div>
+        <span class="eyebrow mono">Featured</span>
+        <h3>Why your calendar is lying to you about how busy you are</h3>
+        <p>Meeting time and focus time look identical on a calendar grid â€” and that's the first planning mistake most teams make. Here's a better way to see the week.</p>
+        <div style="margin-top:18px;"><button class="btn btn-ghost">Read the article</button></div>
+      </div>
+    </div>
+
+    <div class="tagbar">
+      <span class="pill active">All posts</span>
+      <span class="pill">Time management</span>
+      <span class="pill">Remote work</span>
+      <span class="pill">Case studies</span>
+      <span class="pill">Product updates</span>
+      <span class="pill">Team habits</span>
+    </div>
+
+    <div class="subgrid">
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-clock"/></svg></div><h3>The 90-minute focus block</h3><p>Why shorter, uninterrupted sessions beat an open-ended workday.</p><span class="tag mono">Time management</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-globe"/></svg></div><h3>Running a team across 6 time zones</h3><p>An async-first playbook from a fully distributed support team.</p><span class="tag mono">Remote work</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-chart"/></svg></div><h3>How Halo Studio cut meetings by 40%</h3><p>A case study on trading standups for a shared daily plan.</p><span class="tag mono">Case study</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-bolt"/></svg></div><h3>Stackly 4.2: smarter prioritisation</h3><p>What changed under the hood, and how to turn it on today.</p><span class="tag mono">Product update</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-users"/></svg></div><h3>The quiet cost of "quick syncs"</h3><p>Every unplanned 15-minute call has a hidden focus-time tax.</p><span class="tag mono">Team habits</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-doc"/></svg></div><h3>A template for weekly planning</h3><p>The exact five-question review our own team runs every Friday.</p><span class="tag mono">Time management</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-flag"/></svg></div><h3>Setting goals you'll actually revisit</h3><p>Why quarterly OKRs fail without a daily connection to tasks.</p><span class="tag mono">Team habits</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-mail"/></svg></div><h3>Inbox zero is the wrong goal</h3><p>A calmer, achievable standard for email that isn't "zero".</p><span class="tag mono">Time management</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-search"/></svg></div><h3>Reader mailbag: our most-asked questions</h3><p>Answers on templates, permissions and migrating from spreadsheets.</p><span class="tag mono">Product update</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-send"/></svg></div><h3>Get the weekly digest</h3><p>One email, every Friday â€” new posts, templates and product notes.</p><span class="tag mono">Newsletter</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section soft" aria-labelledby="blog-topics-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Explore by topic</span><h2 id="blog-topics-title">Ideas for every kind of workday</h2></div><div class="feature-grid"><article class="feature-panel"><h3>Focus & energy</h3><p>Practical ways to protect attention and work with your natural rhythm.</p></article><article class="feature-panel"><h3>Team operations</h3><p>Playbooks for clear ownership, useful meetings and calmer handoffs.</p></article><article class="feature-panel"><h3>Planning systems</h3><p>Simple frameworks for turning long lists into achievable weeks.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="blog-editors-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Editor's picks</span><h2 id="blog-editors-title">Start with our most useful guides</h2></div><div class="quote-grid"><article class="quote-card"><p>Designing a weekly review you will still use three months from now.</p><footer>8 min read · Planning</footer></article><article class="quote-card"><p>The practical guide to protecting focus time on a shared calendar.</p><footer>11 min read · Focus</footer></article><article class="quote-card"><p>How high-trust teams communicate progress without constant check-ins.</p><footer>7 min read · Teams</footer></article></div></div></section>
+
+<section class="content-section soft" aria-labelledby="blog-library-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Free resource library</span><h2 id="blog-library-title">Put the ideas into practice</h2><p>Download the same planning tools our team uses to review weeks, run projects and protect deep work.</p></div><ul class="check-list"><li>Weekly planning worksheet</li><li>Async team update template</li><li>Meeting cost calculator</li><li>Quarterly goal review</li></ul></div></section>
+
+<section class="content-section" aria-labelledby="blog-community-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Written with the community</span><h2 id="blog-community-title">Real lessons from real teams</h2><p>Operators, designers, founders and researchers share the systems that made their work more sustainable.</p></div><div class="metric-grid"><div class="metric-box"><strong>240+</strong><span>practical articles</span></div><div class="metric-box"><strong>36</strong><span>team case studies</span></div><div class="metric-box"><strong>18k</strong><span>weekly readers</span></div><div class="metric-box"><strong>52</strong><span>expert contributors</span></div></div></div></section>
+
+<section class="content-section soft" aria-labelledby="blog-series-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Popular series</span><h2 id="blog-series-title">Go deeper, one practical lesson at a time</h2><p>Follow a complete learning path or choose the guide that solves today’s problem.</p></div><div class="feature-grid"><article class="feature-panel"><span class="step-num mono">6-part series</span><h3>Rebuild your workweek</h3><p>Audit your time, set boundaries, and design a weekly rhythm that can survive real life.</p></article><article class="feature-panel"><span class="step-num mono">4-part series</span><h3>The async team handbook</h3><p>Replace avoidable meetings with decisions, updates, and handoffs people can trust.</p></article><article class="feature-panel"><span class="step-num mono">5-part series</span><h3>Goals into daily action</h3><p>Connect long-term direction to the small choices your team makes each morning.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="blog-authors-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Share what works</span><h2 id="blog-authors-title">Write for the Stackly community</h2><p>We publish thoughtful, experience-based stories from people improving how work gets planned and shared.</p><ul class="check-list"><li>Original lessons grounded in real practice</li><li>Editorial support from outline to publication</li><li>Reach an audience of 18,000 weekly readers</li></ul></div><div class="quote-card"><p>“Writing for Stackly helped us turn a hard-earned internal lesson into a guide other remote teams could actually use.”</p><footer>Samira · Community contributor</footer></div></div></section>
+
+<section class="content-section" aria-labelledby="blog-subscribe-title"><div class="wrap"><div class="section-cta"><div><h2 id="blog-subscribe-title">One useful idea every Friday</h2><p>Join the weekly digest for new essays, templates and product notes.</p></div><a class="btn" href="contact.html">Join the digest</a></div></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+        <p>Productivity software that turns busy schedules into calm, realistic daily plans.</p>
+<div class="footer-socials" aria-label="Social media">
+          <a href="404.html" aria-label="Stackly on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5V18M6.5 5.5v.1M10.5 18v-5.3c0-2.3 3-3.3 4.5-1.5.4.5.5 1.2.5 2V18M10.5 11v7"/></svg></a>
+          <a href="404.html" aria-label="Stackly on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></a>
+          <a href="404.html" aria-label="Stackly on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.8" r=".7" class="icon-fill"/></svg></a>
+          <a href="404.html" aria-label="Stackly RSS feed"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="17.5" r="1" class="icon-fill"/><path d="M5.5 11.5a7 7 0 0 1 7 7M5.5 6a12.5 12.5 0 0 1 12.5 12.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-column"><h2>Product</h2><a href="services.html">Features</a><a href="services.html#services-flow-title">Workflows</a><a href="services.html#services-integrations-title">Integrations</a><a href="services.html#services-security-title">Security</a></div>
+      <div class="footer-column"><h2>Company</h2><a href="about.html">About us</a><a href="about.html#about-culture-title">Culture</a><a href="about.html#about-join-title">Careers</a><a href="contact.html">Contact</a></div>
+      <div class="footer-column"><h2>Resources</h2><a href="blog.html">Journal</a><a href="blog.html#blog-library-title">Templates</a><a href="contact.html#contact-faq-title">Help & FAQ</a><a href="contact.html#contact-route-title">Support</a></div>
+      <div class="footer-newsletter">
+        <h2>A better Friday email</h2><p>One practical planning idea, plus new templates and product notes.</p>
+        <form class="footer-form"><label class="sr-only" for="footer-email-blog">Email address</label><input id="footer-email-blog" type="email" placeholder="you@company.com" required><button type="submit" class="btn btn-solid">Subscribe</button></form>
+        <span class="footer-note">No spam. Unsubscribe whenever you like.</span>
+      </div>
+    </div>
+    <div class="footer-contact"><span>support@stackly.app</span><span>San Francisco · Lisbon · Bengaluru</span><span>Support: Mon–Fri, 8am–8pm</span></div>
+    <div class="footer-bottom"><span>© 2026 Stackly. Plan the day, not just the list.</span><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Accessibility</a></div></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

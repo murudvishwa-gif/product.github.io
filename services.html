@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services â€” Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="services">
+<!-- SVG ICON SPRITE -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="4,13 10,19 20,6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><circle cx="17" cy="10" r="2.6"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><path d="M15.5 14.2c2.5.3 4.5 2.3 4.5 5.8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><line x1="5" y1="21" x2="19" y2="21"/><rect x="6" y="12" width="3.2" height="8"/><rect x="10.4" y="7" width="3.2" height="13"/><rect x="14.8" y="3" width="3.2" height="17"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,9 13,9"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,6 12,13 21,6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,2.5 15,9.5 22,10.3 16.8,15 18.3,21.5 12,18 5.7,21.5 7.2,15 2,10.3 9,9.5"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
+  <symbol id="i-sync" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 6v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3M4 18v-5h5"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-4.6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-8 11-8 11z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5L17 21l-1.5-8.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="21" y1="21" x2="15.3" y2="15.3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><polygon points="3,11 21,3 13,21 11,13"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12,3 21,8 12,13 3,8"/><polyline points="3,14 12,19 21,14"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><line x1="5" y1="3" x2="5" y2="21"/><path d="M5 4h14l-3 4 3 4H5"/></symbol>
+</svg>
+
+<!-- DAY RAIL -->
+<div id="day-rail">
+  <div class="seg" style="--seg-color:var(--home-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--about-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--services-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--blog-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--contact-a)"><div class="fill"></div></div>
+</div>
+<div class="rail-labels">
+  <span data-lbl="home">Dawn Â· Home</span>
+  <span data-lbl="about">Morning Â· About</span>
+  <span data-lbl="services">Midday Â· Services</span>
+  <span data-lbl="blog">Afternoon Â· Blog</span>
+  <span data-lbl="contact">Dusk Â· Contact</span>
+</div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-in">
+    <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+    <div class="scrim" id="scrim"></div>
+    <nav class="primary" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About Us</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="login.html">Log in</a>
+        <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="login.html">Log in</a>
+      <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="page" id="services" style="--seg-color:var(--services-a); --seg-color-soft:#D9622B26;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow mono">Midday Â· 12:00 â€” the toolkit</span>
+      <h2>Everything a working day needs</h2>
+      <p>Ten connected tools, one shared plan. Turn any of them on or off per workspace.</p>
+    </div>
+
+    <div class="hero-mosaic" aria-label="Stackly services and tools">
+      <img src="assets/images/services-dashboard.webp" alt="An isometric productivity analytics dashboard" width="900" height="620" fetchpriority="high">
+      <img src="assets/images/services-automation.webp" alt="Workflow nodes connected by flowing ribbons" width="900" height="620" loading="lazy">
+      <img src="assets/images/services-team.webp" alt="A team moving cards through a shared workflow" width="900" height="620" loading="lazy">
+      <img class="hero-image-fourth" src="assets/images/services-insights.webp" alt="A chart rising from a weekly planner" width="900" height="620" loading="lazy">
+    </div>
+
+    <div class="spotlight">
+      <div>
+        <span class="eyebrow mono">Featured â€” Analytics & reporting</span>
+        <h3>See where your week actually went</h3>
+        <p>A weekly report breaks down focus time, meeting load and task throughput by project, so planning next week takes minutes instead of guesswork.</p>
+      </div>
+      <div class="bars">
+        <div class="bar" style="height:40%; animation-delay:0s;"></div>
+        <div class="bar" style="height:70%; animation-delay:0.05s;"></div>
+        <div class="bar" style="height:55%; animation-delay:0.1s;"></div>
+        <div class="bar" style="height:90%; animation-delay:0.15s;"></div>
+        <div class="bar" style="height:65%; animation-delay:0.2s;"></div>
+        <div class="bar" style="height:80%; animation-delay:0.25s;"></div>
+      </div>
+    </div>
+
+    <div class="subgrid">
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-check"/></svg></div><h3>Task management</h3><p>Lists, boards or a calendar view â€” the same tasks, however you like to see them.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-calendar"/></svg></div><h3>Calendar & scheduling</h3><p>Book meetings around focus time automatically, never over it.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-clock"/></svg></div><h3>Time tracking</h3><p>One click starts a timer that files itself under the right project.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-users"/></svg></div><h3>Team collaboration</h3><p>Comment, assign and hand off work without leaving the task.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-gear"/></svg></div><h3>Automation & workflows</h3><p>If-this-then-that rules that move tasks along without you touching them.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-chart"/></svg></div><h3>Analytics & reporting</h3><p>Weekly breakdowns of focus time, meetings and throughput, by project.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-flag"/></svg></div><h3>Goals & OKRs</h3><p>Tie daily tasks to quarterly goals so priority is never a guess.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-doc"/></svg></div><h3>Notes & docs</h3><p>Fast, linked notes that turn any line into a task in one keystroke.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-sync"/></svg></div><h3>120+ integrations</h3><p>Slack, GitHub, Figma, Zoom and more, kept in sync automatically.</p></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-mobile"/></svg></div><h3>Mobile & offline app</h3><p>Full planning power on iOS and Android, even without signal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section soft" aria-labelledby="services-fit-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Built for your workflow</span><h2 id="services-fit-title">One system, different ways to work</h2></div><div class="feature-grid"><article class="feature-panel"><h3>For individuals</h3><p>Plan focused days without maintaining a complicated productivity system.</p></article><article class="feature-panel"><h3>For small teams</h3><p>Share priorities and handoffs without adding another daily meeting.</p></article><article class="feature-panel"><h3>For operations</h3><p>Standardize repeatable work while keeping ownership visible.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="services-flow-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Connected by default</span><h2 id="services-flow-title">From request to result, without the gaps</h2><p>Capture incoming work, assign it, schedule it and report on it without rebuilding context at every step.</p></div><ul class="check-list"><li>Custom intake forms and templates</li><li>Rules for routing and recurring work</li><li>Live workload and completion reporting</li></ul></div></section>
+
+<section class="content-section soft" aria-labelledby="services-integrations-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Works with your stack</span><h2 id="services-integrations-title">Connect the tools you already use</h2></div><div class="logo-cloud"><span class="logo-chip">Google Calendar</span><span class="logo-chip">Microsoft Outlook</span><span class="logo-chip">Slack</span><span class="logo-chip">GitHub</span><span class="logo-chip">Figma</span><span class="logo-chip">Zoom</span><span class="logo-chip">Notion</span><span class="logo-chip">Zapier</span></div></div></section>
+
+<section class="content-section" aria-labelledby="services-security-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Safe at every scale</span><h2 id="services-security-title">Enterprise control without enterprise friction</h2></div><div class="feature-grid"><article class="feature-panel"><h3>Secure access</h3><p>SSO, SCIM provisioning and granular workspace permissions.</p></article><article class="feature-panel"><h3>Data protection</h3><p>Encryption in transit and at rest, with regional hosting options.</p></article><article class="feature-panel"><h3>Human support</h3><p>Guided onboarding and a named success partner for larger teams.</p></article></div></div></section>
+
+<section class="content-section soft" aria-labelledby="services-onboard-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">A smooth start</span><h2 id="services-onboard-title">From scattered tools to one clear system</h2><p>Move at your own pace or work with our onboarding team for a guided rollout.</p></div><div class="feature-grid"><article class="feature-panel"><span class="step-num mono">01 · Map</span><h3>Understand the workflow</h3><p>We identify your teams, recurring processes, permissions, and reporting needs.</p></article><article class="feature-panel"><span class="step-num mono">02 · Move</span><h3>Bring your work across</h3><p>Import tasks, projects, users, and key history from your existing tools.</p></article><article class="feature-panel"><span class="step-num mono">03 · Launch</span><h3>Help everyone succeed</h3><p>Role-based training and practical templates get each team productive quickly.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="services-plans-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Support that scales</span><h2 id="services-plans-title">The right level of help at every stage</h2><p>Individuals get a simple guided setup, while growing organizations can add migration, training, and governance support.</p></div><ul class="check-list"><li>Self-serve learning for every customer</li><li>Priority support for growing teams</li><li>Dedicated success planning for enterprise</li><li>Quarterly workflow and adoption reviews</li></ul></div></section>
+
+<section class="content-section" aria-labelledby="services-start-title"><div class="wrap"><div class="section-cta"><div><h2 id="services-start-title">Build a workflow your team will use</h2><p>Start with a template or talk with us about a tailored rollout.</p></div><a class="btn" href="contact.html">Talk to sales</a></div></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+        <p>Productivity software that turns busy schedules into calm, realistic daily plans.</p>
+<div class="footer-socials" aria-label="Social media">
+          <a href="404.html" aria-label="Stackly on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5V18M6.5 5.5v.1M10.5 18v-5.3c0-2.3 3-3.3 4.5-1.5.4.5.5 1.2.5 2V18M10.5 11v7"/></svg></a>
+          <a href="404.html" aria-label="Stackly on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></a>
+          <a href="404.html" aria-label="Stackly on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.8" r=".7" class="icon-fill"/></svg></a>
+          <a href="404.html" aria-label="Stackly RSS feed"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="17.5" r="1" class="icon-fill"/><path d="M5.5 11.5a7 7 0 0 1 7 7M5.5 6a12.5 12.5 0 0 1 12.5 12.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-column"><h2>Product</h2><a href="services.html">Features</a><a href="services.html#services-flow-title">Workflows</a><a href="services.html#services-integrations-title">Integrations</a><a href="services.html#services-security-title">Security</a></div>
+      <div class="footer-column"><h2>Company</h2><a href="about.html">About us</a><a href="about.html#about-culture-title">Culture</a><a href="about.html#about-join-title">Careers</a><a href="contact.html">Contact</a></div>
+      <div class="footer-column"><h2>Resources</h2><a href="blog.html">Journal</a><a href="blog.html#blog-library-title">Templates</a><a href="contact.html#contact-faq-title">Help & FAQ</a><a href="contact.html#contact-route-title">Support</a></div>
+      <div class="footer-newsletter">
+        <h2>A better Friday email</h2><p>One practical planning idea, plus new templates and product notes.</p>
+        <form class="footer-form"><label class="sr-only" for="footer-email-services">Email address</label><input id="footer-email-services" type="email" placeholder="you@company.com" required><button type="submit" class="btn btn-solid">Subscribe</button></form>
+        <span class="footer-note">No spam. Unsubscribe whenever you like.</span>
+      </div>
+    </div>
+    <div class="footer-contact"><span>support@stackly.app</span><span>San Francisco · Lisbon · Bengaluru</span><span>Support: Mon–Fri, 8am–8pm</span></div>
+    <div class="footer-bottom"><span>© 2026 Stackly. Plan the day, not just the list.</span><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Accessibility</a></div></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

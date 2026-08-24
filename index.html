@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly â€” Productivity software for a well-run day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<!-- SVG ICON SPRITE -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="4,13 10,19 20,6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><circle cx="17" cy="10" r="2.6"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><path d="M15.5 14.2c2.5.3 4.5 2.3 4.5 5.8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><line x1="5" y1="21" x2="19" y2="21"/><rect x="6" y="12" width="3.2" height="8"/><rect x="10.4" y="7" width="3.2" height="13"/><rect x="14.8" y="3" width="3.2" height="17"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,9 13,9"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,6 12,13 21,6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,2.5 15,9.5 22,10.3 16.8,15 18.3,21.5 12,18 5.7,21.5 7.2,15 2,10.3 9,9.5"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
+  <symbol id="i-sync" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 6v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3M4 18v-5h5"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-4.6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-8 11-8 11z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5L17 21l-1.5-8.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="21" y1="21" x2="15.3" y2="15.3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><polygon points="3,11 21,3 13,21 11,13"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12,3 21,8 12,13 3,8"/><polyline points="3,14 12,19 21,14"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><line x1="5" y1="3" x2="5" y2="21"/><path d="M5 4h14l-3 4 3 4H5"/></symbol>
+</svg>
+
+<!-- DAY RAIL -->
+<div id="day-rail">
+  <div class="seg" style="--seg-color:var(--home-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--about-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--services-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--blog-a)"><div class="fill"></div></div>
+  <div class="seg" style="--seg-color:var(--contact-a)"><div class="fill"></div></div>
+</div>
+<div class="rail-labels">
+  <span data-lbl="home">Dawn Â· Home</span>
+  <span data-lbl="about">Morning Â· About</span>
+  <span data-lbl="services">Midday Â· Services</span>
+  <span data-lbl="blog">Afternoon Â· Blog</span>
+  <span data-lbl="contact">Dusk Â· Contact</span>
+</div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-in">
+    <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+    <div class="scrim" id="scrim"></div>
+    <nav class="primary" id="primary-nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About Us</a>
+      <a href="services.html" data-nav="services">Services</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="login.html">Log in</a>
+        <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="login.html">Log in</a>
+      <a class="btn btn-solid" href="signup.html">Sign up free</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="page" id="home" style="--seg-color:var(--home-a); --seg-color-soft:#E8A33D26;">
+  <div class="wrap"> 
+    <div class="hero">
+      <div>
+        <span class="eyebrow mono">Dawn Â· 06:00 â€” a day, well planned</span>
+        <h1>Every task finds <em>its</em> hour.</h1>
+        <p class="lead">Stackly is the productivity workspace that plans your day around your energy â€” tasks, meetings, notes and goals, arranged like a well-kept schedule instead of a pile of tabs.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="signup.html">Start free trial</a>
+          <button class="btn btn-ghost">Watch 2-min demo</button>
+        </div>
+      </div>
+      <div class="hero-mosaic hero-mosaic-home" aria-label="Stackly productivity scenes">
+        <img src="assets/images/home-focus.webp" alt="A calm dawn workspace with a daily planner" width="900" height="620" fetchpriority="high">
+        <img src="assets/images/home-calendar.webp" alt="Calendar blocks arranged on a cream desk" width="900" height="620">
+        <img src="assets/images/home-clock.webp" alt="A sculptural clock surrounded by task cards" width="900" height="620">
+        <img class="hero-image-fourth" src="assets/images/home-momentum.webp" alt="An abstract path showing forward momentum" width="900" height="620">
+      </div>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat"><div class="num">42k+</div><div class="lbl mono">Teams onboard</div></div>
+      <div class="stat"><div class="num">9.4hrs</div><div class="lbl mono">Saved / week</div></div>
+      <div class="stat"><div class="num">4.9/5</div><div class="lbl mono">Average rating</div></div>
+      <div class="stat"><div class="num">120+</div><div class="lbl mono">Integrations</div></div>
+    </div>
+
+    <div class="section-head">
+      <span class="eyebrow mono">What's inside</span>
+      <h2>One home base for a busy day</h2>
+      <p>Every panel of Stackly, from the first login to the last check-off.</p>
+    </div>
+    <div class="subgrid">
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-check"/></svg></div><h3>Daily planner</h3><p>An hour-by-hour view that drags and drops tasks into open time, automatically.</p><span class="tag mono">Core</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-bolt"/></svg></div><h3>Smart prioritisation</h3><p>Stackly ranks what matters using deadlines, effort and your past habits.</p><span class="tag mono">AI-assisted</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-users"/></svg></div><h3>Shared workspaces</h3><p>Bring a team in and see everyone's day at a glance, without extra meetings.</p><span class="tag mono">Team</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-chart"/></svg></div><h3>Momentum tracking</h3><p>A gentle weekly readout of what got done and where time actually went.</p><span class="tag mono">Insights</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-doc"/></svg></div><h3>Notes that link to tasks</h3><p>Meeting notes turn into action items with one keystroke, not a copy-paste.</p><span class="tag mono">Core</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-sync"/></svg></div><h3>Two-way calendar sync</h3><p>Google, Outlook and iCal stay mirrored, so nothing is ever double-booked.</p><span class="tag mono">Sync</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-mobile"/></svg></div><h3>Offline mobile app</h3><p>Plan on the train, sync when you land â€” nothing waits on a connection.</p><span class="tag mono">Mobile</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-shield"/></svg></div><h3>Private by default</h3><p>Your day plan is encrypted end to end; even we can't read your tasks.</p><span class="tag mono">Security</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-star"/></svg></div><h3>Loved by 42,000 teams</h3><p>From two-person studios to 500-person operations teams, daily.</p><span class="tag mono">Trust</span></div>
+      <div class="subcard"><div class="icon-badge"><svg><use href="#i-send"/></svg></div><h3>Import in one click</h3><p>Bring your board from Trello, Asana or a spreadsheet in under a minute.</p><span class="tag mono">Onboarding</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section soft" aria-labelledby="home-how-title">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow mono">A simpler rhythm</span><h2 id="home-how-title">Plan a better day in three steps</h2><p>Stackly turns an overloaded list into a realistic plan you can finish.</p></div>
+    <div class="feature-grid">
+      <article class="feature-panel"><span class="step-num mono">01 · Capture</span><h3>Bring everything together</h3><p>Collect tasks, notes, meetings and requests in one calm inbox.</p></article>
+      <article class="feature-panel"><span class="step-num mono">02 · Shape</span><h3>Build a day that fits</h3><p>Drag priorities around fixed meetings and protect time for deep work.</p></article>
+      <article class="feature-panel"><span class="step-num mono">03 · Finish</span><h3>Work from one view</h3><p>See only what matters now, with gentle prompts when plans change.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" aria-labelledby="home-work-title">
+  <div class="wrap split-feature"><div><span class="eyebrow mono">Made for real schedules</span><h2 id="home-work-title">Your tasks and calendar finally agree</h2><p>Stackly plans work around the time you actually have—not an imaginary eight-hour blank slate.</p><ul class="check-list"><li>Two-way calendar sync</li><li>Automatic focus-time protection</li><li>Fast rescheduling when the day changes</li></ul></div><div class="feature-grid"><article class="feature-panel"><h3>Today</h3><p>A focused timeline for the work in front of you.</p></article><article class="feature-panel"><h3>Upcoming</h3><p>Spot overloaded days before they become a problem.</p></article><article class="feature-panel"><h3>Someday</h3><p>Keep good ideas without cluttering this week.</p></article></div></div>
+</section>
+
+<section class="content-section soft" aria-label="Stackly results">
+  <div class="wrap"><div class="metric-grid"><div class="metric-box"><strong>42k+</strong><span>teams planning in Stackly</span></div><div class="metric-box"><strong>9.4h</strong><span>saved per team each week</span></div><div class="metric-box"><strong>31%</strong><span>fewer overdue tasks</span></div><div class="metric-box"><strong>4.9/5</strong><span>average customer rating</span></div></div></div>
+</section>
+
+<section class="content-section" aria-labelledby="home-trust-title">
+  <div class="wrap"><div class="section-head"><span class="eyebrow mono">From busy to balanced</span><h2 id="home-trust-title">A calmer day, in their words</h2></div><div class="quote-grid"><blockquote class="quote-card"><p>“We stopped carrying tomorrow's work in our heads. Everyone knows what today is for.”</p><footer>Maya · Halo Studio</footer></blockquote><blockquote class="quote-card"><p>“Stackly replaced three planning meetings and gave the team back Monday morning.”</p><footer>Jon · Northstar Labs</footer></blockquote><blockquote class="quote-card"><p>“It is the first planner that respects the limits of a real calendar.”</p><footer>Elena · Common Ground</footer></blockquote></div></div>
+</section>
+
+<section class="content-section soft" aria-labelledby="home-rhythm-title"><div class="wrap"><div class="section-head"><span class="eyebrow mono">Fits the whole week</span><h2 id="home-rhythm-title">A workspace that changes with your day</h2><p>Start with a clear morning plan, adapt when priorities move, and finish with an honest view of your progress.</p></div><div class="feature-grid"><article class="feature-panel"><span class="step-num mono">Morning</span><h3>Choose the essential work</h3><p>Stackly recommends a realistic set of priorities based on deadlines, available time, and your energy.</p></article><article class="feature-panel"><span class="step-num mono">Midday</span><h3>Adjust without starting over</h3><p>Move one task and the rest of your plan reshapes around meetings and protected focus blocks.</p></article><article class="feature-panel"><span class="step-num mono">Evening</span><h3>Close the loop</h3><p>Review what moved forward, carry over unfinished work, and begin tomorrow with a clean slate.</p></article></div></div></section>
+
+<section class="content-section" aria-labelledby="home-teams-title"><div class="wrap split-feature"><div><span class="eyebrow mono">Personal and shared</span><h2 id="home-teams-title">Begin alone, bring your team when ready</h2><p>Your personal plan stays focused while shared projects keep everyone aligned on ownership, timing, and progress.</p><ul class="check-list"><li>Private personal tasks beside shared projects</li><li>Simple guest access for clients and partners</li><li>Team workload views without micromanagement</li></ul></div><div class="quote-card"><p>“Within one week, the team knew what mattered without asking for another status meeting.”</p><footer>Priya · Operations lead at Fieldwork</footer></div></div></section>
+
+<section class="content-section" aria-labelledby="home-start-title">
+  <div class="wrap"><div class="section-cta"><div><h2 id="home-start-title">Make tomorrow feel manageable</h2><p>Start free, import your tasks, and build your first focused day in minutes.</p></div><a class="btn" href="services.html">Explore Stackly</a></div></div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly" class="brand-logo"></a>
+        <p>Productivity software that turns busy schedules into calm, realistic daily plans.</p>
+<div class="footer-socials" aria-label="Social media">
+          <a href="404.html" aria-label="Stackly on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5V18M6.5 5.5v.1M10.5 18v-5.3c0-2.3 3-3.3 4.5-1.5.4.5.5 1.2.5 2V18M10.5 11v7"/></svg></a>
+          <a href="404.html" aria-label="Stackly on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></a>
+          <a href="404.html" aria-label="Stackly on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.8" r=".7" class="icon-fill"/></svg></a>
+          <a href="404.html" aria-label="Stackly RSS feed"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="17.5" r="1" class="icon-fill"/><path d="M5.5 11.5a7 7 0 0 1 7 7M5.5 6a12.5 12.5 0 0 1 12.5 12.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-column"><h2>Product</h2><a href="services.html">Features</a><a href="services.html#services-flow-title">Workflows</a><a href="services.html#services-integrations-title">Integrations</a><a href="services.html#services-security-title">Security</a></div>
+      <div class="footer-column"><h2>Company</h2><a href="about.html">About us</a><a href="about.html#about-culture-title">Culture</a><a href="about.html#about-join-title">Careers</a><a href="contact.html">Contact</a></div>
+      <div class="footer-column"><h2>Resources</h2><a href="blog.html">Journal</a><a href="blog.html#blog-library-title">Templates</a><a href="contact.html#contact-faq-title">Help & FAQ</a><a href="contact.html#contact-route-title">Support</a></div>
+      <div class="footer-newsletter">
+        <h2>A better Friday email</h2><p>One practical planning idea, plus new templates and product notes.</p>
+        <form class="footer-form"><label class="sr-only" for="footer-email-index">Email address</label><input id="footer-email-index" type="email" placeholder="you@company.com" required><button type="submit" class="btn btn-solid">Subscribe</button></form>
+        <span class="footer-note">No spam. Unsubscribe whenever you like.</span>
+      </div>
+    </div>
+    <div class="footer-contact"><span>support@stackly.app</span><span>San Francisco · Lisbon · Bengaluru</span><span>Support: Mon–Fri, 8am–8pm</span></div>
+    <div class="footer-bottom"><span>© 2026 Stackly. Plan the day, not just the list.</span><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Accessibility</a></div></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
