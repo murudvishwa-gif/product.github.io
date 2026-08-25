@@ -16,10 +16,22 @@
     <span class="error-code mono">Error 404</span>
     <h1>This link has wandered off the plan.</h1>
     <p>The social destination is not available yet. You can return home or continue exploring Stackly.</p>
-    <div class="error-actions"><a href="index.html" class="btn btn-solid">Back to Home</a></div>
+    <div class="error-actions">
+      <button type="button" class="btn btn-solid" id="go-back">Go Back</button>
+      <a href="index.html" class="btn btn-ghost">Back to Home</a>
+    </div>
   </div>
   <nav class="error-nav" aria-label="Helpful links"><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a></nav>
 </main>
+<script>
+  document.getElementById('go-back').addEventListener('click', function () {
+    if (document.referrer && window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = 'index.html';
+    }
+  });
+</script>
 </body>
 </html>
 
