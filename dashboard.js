@@ -66,6 +66,9 @@
   }));
 
   function bindContentActions() {
+    main.querySelectorAll('button:not([data-view-action])').forEach(button => button.addEventListener('click', () => {
+      window.location.href = '404.html';
+    }));
     main.querySelectorAll('a[href="#"]').forEach(link => link.addEventListener('click', function (event) {
       event.preventDefault();
       const text = link.textContent.toLowerCase();
@@ -76,7 +79,7 @@
       else selectView(role === 'admin' ? 'Users' : 'My tasks');
     }));
     main.querySelectorAll('[data-view-action]').forEach(button => button.addEventListener('click', () => {
-      button.textContent = button.textContent.includes('Export') ? 'Export ready ✓' : 'Added ✓';
+      window.location.href = '404.html';
     }));
     const filter = main.querySelector('[data-table-filter]');
     if (filter) filter.addEventListener('input', () => {
@@ -120,7 +123,7 @@
   }
   document.querySelectorAll('.dash-tools button').forEach(button => button.addEventListener('click', () => {
     if (button.getAttribute('aria-label') === 'Theme') document.body.classList.toggle('dash-dark');
-    else selectView(role === 'admin' ? 'Activity logs' : 'Calendar');
+    else window.location.href = '404.html';
   }));
   const logout = document.querySelector('[data-logout]');
   if (logout) logout.addEventListener('click', () => { localStorage.removeItem('stacklySession'); window.location.href = 'login.html'; });

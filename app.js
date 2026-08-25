@@ -1,4 +1,4 @@
-﻿(function(){
+(function(){
   const pages = ['home','about','services','blog','contact'];
   const colors = {home:'--home-a', about:'--about-a', services:'--services-a', blog:'--blog-a', contact:'--contact-a'};
   const page = document.body.dataset.page || 'home';
@@ -12,7 +12,6 @@
 
   root.style.setProperty('--accent', getComputedStyle(root).getPropertyValue(colors[page]).trim());
   navLinks.forEach(link => link.classList.toggle('active', link.dataset.nav === page));
-  document.querySelectorAll('.rail-labels span').forEach((label, index) => label.classList.toggle('active', index === activeIndex));
 
   function closeMenu(){
     nav.classList.remove('open');
@@ -31,10 +30,6 @@
     header.classList.toggle('condensed', window.scrollY > 40);
     const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / max));
-    document.querySelectorAll('#day-rail .seg').forEach((segment, index) => {
-      const fill = segment.querySelector('.fill');
-      fill.style.transform = `scaleX(${index < activeIndex ? 1 : index === activeIndex ? progress : 0})`;
-    });
   }
   window.addEventListener('scroll', updateProgress, {passive:true});
   updateProgress();
@@ -42,7 +37,7 @@
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('in-view'); });
   }, {threshold:0.12});
-  document.querySelectorAll('.subcard').forEach(card => observer.observe(card));
+  document.querySelectorAll('.subcard, .content-section, .image-story-card').forEach(card => observer.observe(card));
 
   // Send unfinished controls to the site's friendly 404 page.
   document.querySelectorAll('a[href="#"], a[href=""]').forEach(link => {

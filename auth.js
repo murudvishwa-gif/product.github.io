@@ -16,6 +16,8 @@
     const email = form.querySelector('[name="email"]').value;
     const name = nameField && nameField.value.trim() ? nameField.value.trim() : email.split('@')[0];
     localStorage.setItem('stacklySession', JSON.stringify({ name, email, role }));
-    window.location.href = role === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html';
+    window.location.href = document.body.dataset.authPage === 'signup'
+      ? 'login.html'
+      : (role === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html');
   });
 })();
